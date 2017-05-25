@@ -8,14 +8,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns = { "/index.jsp" })
-public class TopServlet extends HttpServlet{
+@WebServlet(urlPatterns = { "/logout" })
+public class LogoutServlet extends HttpServlet{
 	private static final long serialVersionUID = 1L;
 
 	@Override
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws IOException, ServletException {
-
-		request.getRequestDispatcher("/top.jsp").forward(request, response);
+		response.sendRedirect("./login");
+		request.getSession().invalidate();
 	}
 }

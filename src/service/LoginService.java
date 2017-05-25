@@ -11,15 +11,14 @@ import utils.CipherUtil;
 
 public class LoginService {
 
-	public User login(String loginID, String password){
+	public User login(String loginId, String password){
 
 		Connection connection = null;
 		try {
 			connection = getConnection();
-
 			UserDao userDao = new UserDao();
 			String encPassword = CipherUtil.encrypt(password);
-			User user = userDao.getUser(connection, loginID, encPassword); //sql文
+			User user = userDao.getLoginUser(connection, loginId, encPassword); //sql文
 
 			return user;
 		} catch (RuntimeException e) {

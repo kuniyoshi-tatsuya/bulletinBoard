@@ -5,61 +5,57 @@ import java.io.Serializable;
 public class User implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	private String loginID;
+	private String id;
+	private String loginId;
 	private String password;
 	private String name;
-	private String branch;
-	private String department;
+	private String branchId;
+	private String departmentId;
 	private String userExsist;
 
-	public String getLoginID() {
-		return loginID;
+	public String getId() {
+		return id;
 	}
-
-	public void setLoginID(String loginID) {
-		this.loginID = loginID;
+	public void setId(String id) {
+		this.id = id;
 	}
-
+	public String getLoginId() {
+		return loginId;
+	}
+	public void setLoginId(String loginId) {
+		this.loginId = loginId;
+	}
 	public String getPassword() {
 		return password;
 	}
-
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
 	public String getName() {
 		return name;
 	}
-
 	public void setName(String name) {
 		this.name = name;
 	}
-
-
-
-	public String getBranch() {
-		return branch;
+	public String getBranchId() {
+		return branchId;
 	}
-
-	public void setBranch(String branch) {
-		this.branch = branch;
+	public void setBranchId(String branchId) {
+		this.branchId = branchId;
 	}
-
-	public String getDepartment() {
-		return department;
+	public String getDepartmentId() {
+		return departmentId;
 	}
-
-	public void setDepartment(String department) {
-		this.department = department;
+	public void setDepartmentId(String departmentId) {
+		this.departmentId = departmentId;
 	}
-
-	public String getUser() {
+	public String getUserExsist() {
 		return userExsist;
 	}
-
-	public void setUser(String userExsist) {
+	public void setUserExsist(String userExsist) {
 		this.userExsist = userExsist;
 	}
+
+
 
 }
